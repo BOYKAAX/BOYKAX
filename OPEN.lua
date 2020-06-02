@@ -138,16 +138,6 @@ end
 _redis = load_redis()  
 --------------------------------------------------------------------------------------------------------------
 print([[
-
-┏┓━━━━━━━━━━━┏┓━━━━━━━━━━━
-┃┃━━━━━━━━━━━┃┃━━━━━━━━━━━
-┃┗━┓┏━━┓┏┓━┏┓┃┃┏┓┏━━┓━┏┓┏┓
-┃┏┓┃┃┏┓┃┃┃━┃┃┃┗┛┛┗━┓┃━┗╋╋┛
-┃┗┛┃┃┗┛┃┃┗━┛┃┃┏┓┓┃┗┛┗┓┏╋╋┓
-┗━━┛┗━━┛┗━┓┏┛┗┛┗┛┗━━━┛┗┛┗┛
-━━━━━━━━┏━┛┃━━━━━━━━━━━━━━
-━━━━━━━━┗━━┛━━━━━━━━━━━━━━
-
 > CH › @GOR_u2
 ]])
 sudos = dofile("./Info.lua") 
@@ -160,7 +150,7 @@ token = sudos.token
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,842721206,297625513}   
+sudo_users = {SUDO,717869155,1216110209}   
 function SudoBot(msg)  
 local OPEN = false  
 for k,v in pairs(sudo_users) do  
@@ -227,9 +217,9 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(842721206) then  
+if tonumber(user_id) == tonumber(717869155) then  
 var = true  
-elseif tonumber(user_id) == tonumber(297625513) then
+elseif tonumber(user_id) == tonumber(1216110209) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then  
 var = true  
@@ -254,9 +244,9 @@ return var
 end 
 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(842721206) then  
+if tonumber(user_id) == tonumber(717869155) then  
 var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(297625513) then
+elseif tonumber(user_id) == tonumber(1216110209) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -927,7 +917,7 @@ end
 
 if text == '• تحديث السورس ᜱ .' and SudoBot(msg) then 
 os.execute('rm -rf OPEN.lua')
-os.execute('wget https://raw.githubusercontent.com/BOYKAAX/OPEN/master/OPEN.lua')
+os.execute('wget https://raw.githubusercontent.com/XENGOYX/OPEN/master/OPEN.lua')
 send(msg.chat_id_, msg.id_,'✥┆ تم تحديث السورس . 𖦲 ◜')
 dofile('OPEN.lua')  
 end
@@ -2112,13 +2102,10 @@ end
 return false
 end
 os.execute('rm -rf OPEN.lua')
-os.execute('wget https://raw.githubusercontent.com/TeamOPEN/OPEN/master/OPEN.lua')
+os.execute('wget https://raw.githubusercontent.com/XENGOYX/OPEN/master/OPEN.lua')
 send(msg.chat_id_, msg.id_,'✥┆ تم تحديث السورس . 𖦲 ◜')
 dofile('OPEN.lua')  
 end
-
-
-
 if text and text:match("^• تغير الاشتراك 𖤩  .$") and SudoBot(msg) then  
 database:setex(bot_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
 send(msg.chat_id_, msg.id_, '܁༯┆حسنا ارسل المعرف الان 💞 ܰ') 
@@ -2173,7 +2160,7 @@ Text = [[
 ༯┆[INFORMATION BOYKA](t.me/BoYkA_x)
 ༯┆[CH STORY](https://t.me/joinchat/AAAAAEvr1yqOypm-uHojPA)
 ⠠⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠠𖧧
-༯┆ [TWSL SOURCE](t.me/y07bot) 
+༯┆ [TWSL SOURCE](t.me/UTwsUbot) 
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -2284,7 +2271,6 @@ send(msg.chat_id_, msg.id_,'܁༯┆تم حفض الامر ܊ قم بالتجر�
 database:del(bot_id.."Set:Cmd:Group1"..msg.chat_id_..':'..msg.sender_user_id_)
 return false
 end
---------------------------------------------------------------------------------------------------------------
 if text == 'قفل الدردشه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id.."lock:text"..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)  
@@ -4440,7 +4426,7 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
--------------------------------------LOKRAND - @bbbbl - @Y07BOT - @VVWVV3 - @K777A ---------------------------------------
+-------------------------------------LOKRAND - @bbbbl - @UTwsUbot - @VVWVV3 - @K777A ---------------------------------------
 if text == 'مسح المحظورين' and Mod(msg) then
 database:del(bot_id..'Ban:User'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, '\n܁༯┆تم مسح المحظورين 💞 ܰ')
@@ -6888,7 +6874,6 @@ local CHENGER_ID = text:match("(.*)")
 database:set(bot_id.."KLISH:ID"..msg.chat_id_,CHENGER_ID)
 send(msg.chat_id_, msg.id_,'܁༯┆تم تعين الايدي بنجاح 💞 ܰ ')    
 end
-
 if text == 'مسح البوتات' or text == 'طرد البوتات' and Mod(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -6960,7 +6945,6 @@ end,nil)
 end
 end,nil)
 end
-
 if database:get(bot_id.."Set:Rules:" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text == 'الغاء' then 
 send(msg.chat_id_, msg.id_, "܁༯┆تم الغاء حفظ القوانين 💞 ܰ ") 
@@ -8490,7 +8474,7 @@ send(msg.chat_id_, msg.id_,Text)
 end
 
 if text == 'كلايش ايدي' and Mod(msg) then 
-send(msg.chat_id_, msg.id_,'1-`.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username \n.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast \n.𖣂 𝙡𝘿 , #id \n.𖣂 𝙂𝙖𝙢𝙨 , #game \n. 𖣂 𝙢𝙨𝙂𝙨 , #msgs`\n2- `- 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .\n- 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .\n- ?? 𝐒??𝐀 : #stast 𓂅 .\n- 𓏬 𝐈𝐃 : #id 𓂅 .`\n3- `☆•𝐮𝐬𝐞𝐫 : #username ??  \n☆•𝐦𝐬𝐠  : #msgs 𖣬 \n☆•𝐬𝐭𝐚 : #stast 𖣬 \n☆•𝐢𝐝  : #id 𖣬`')
+send(msg.chat_id_, msg.id_,'1-`.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username \n.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast \n.𖣂 𝙡𝘿 , #id \n.𖣂 𝙂𝙖𝙢𝙨 , #game \n. 𖣂 𝙢𝙨𝙂𝙨 , #msgs`\n2- `- 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .\n- 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .\n- ?? 𝐒??𝐀 : #stast 𓂅 .\n- 𓏬 𝐈𝐃 : #id 𓂅 .`\n3- `☆•𝐮𝐬𝐞𝐫 : #username 𖣬  \n☆•𝐦𝐬𝐠  : #msgs 𖣬 \n☆•𝐬𝐭𝐚 : #stast 𖣬 \n☆•𝐢𝐝  : #id 𖣬`')
 end
 if text == ("ايدي") and msg.reply_to_message_id_ == 0 and not database:get(bot_id..'Bot:Id'..msg.chat_id_) then      
 if not database:sismember(bot_id..'Spam:Texting'..msg.sender_user_id_,text) then
@@ -9592,7 +9576,7 @@ Text = [[
 send(msg.chat_id_, msg.id_,Text) 
 return false
 end
--------------------------------------LOKRAND - @bbbbl - @Y07BOT - @VVWVV3 - @K777A ---------------------------------------
+-------------------------------------LOKRAND - @bbbbl - @UTwsUbot - @VVWVV3 - @K777A ---------------------------------------
 
 
 if text == 'سمايلات' or text == 'سمايل' then
@@ -10082,7 +10066,6 @@ database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)
 end
 database:set(bot_id..'Set:English:Bot'..msg.chat_id_,true)
 end
-------------------------------------------------------------------------
 if text == 'امثله' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -10166,7 +10149,7 @@ Text_Games = [[
 ܁ 𖧇゠ لعبة انكليزي ▹ ◃ ◞انكليزي◜
 ܁ 𖧇゠ لعبة رياضيات ▹ ◃ ◞رياضيات◜
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤓┆[𝚃𝚆𝙰𝚂𝙻 𝚂𝙾𝚄𝚁𝙲𝙴](t.me/y07bot) 
+𖤓┆[𝚃𝚆𝙰𝚂𝙻 𝚂𝙾𝚄𝚁𝙲𝙴](t.me/UTwsUbot) 
 ]]
 send(msg.chat_id_, msg.id_,Text_Games) 
 end
