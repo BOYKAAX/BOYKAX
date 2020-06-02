@@ -21,8 +21,8 @@ sudo apt-get install libnotify-dev -y
 sudo chmod +x tg
 lua OPEN.lua
 sudo chmod +x OPEN
-sudo chmod +x ./BK
-./BK
+sudo chmod +x ./RUN
+./RUN
 }
 if [ "$1" = "install" ]; then
 install
@@ -34,6 +34,6 @@ fi
 sudo chmod +x tg
 lua OPEN.lua
 sudo chmod +x OPEN
-sudo chmod +x ./BK
-./BK
+sudo chmod +x ./RUN
+./RUN
 fi
